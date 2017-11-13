@@ -1,0 +1,38 @@
+$header_height: 90px;
+
+.header:not(.md-menu-toolbar) {
+    background-color: #4286f4;
+    height: $header_height;
+    min-height: $header_height;
+    z-index: 65;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.35);
+    position: relative;
+
+    .md-toolbar-layout {
+        padding: 0 8px;
+        margin: 11px 0;
+
+
+        .info-section {
+            margin-left: 24px;
+            margin-right: 24px;
+            height: 50px;
+            padding-top: 5px;
+            width: 100%;
+
+            @media screen and (max-width: 400px) {
+                padding-top: 0;
+                line-height: 20px;
+            }
+
+           
+            .details {
+                font-size: 18px;
+                color: antiquewhite;
+            }
+        }
+
+
+        
+    }
+}

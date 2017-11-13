@@ -1,0 +1,23 @@
+<div class = "modal-container">
+	<h1 mat-dialog-title>Details</h1>
+
+<div class="form-container">
+	<mat-form-field> <mat-select #type
+		placeholder="Override Type :" (change)="typeChange(type.value)">
+	<mat-option *ngFor="let type of types" [value]="type.id">{{type.name}}</mat-option>
+	</mat-select> </mat-form-field>
+
+	<mat-form-field> <span matPrefix>$&nbsp;</span> <input
+		matInput placeholder="Override Amount" [(ngModel)]="amount"> </mat-form-field>
+	<mat-form-field> <input matInput
+		[disabled]="isTotalType" [matDatepicker]="endDate"
+		placeholder="Choose a date"> <mat-datepicker-toggle matSuffix
+		[for]="endDate"></mat-datepicker-toggle> <mat-datepicker #endDate></mat-datepicker>
+	</mat-form-field>
+</div>
+
+<div>
+	<button mat-raised-button color="primary" (click)="onSubmit()">Submit</button>
+	<button mat-raised-button color="primary" (click)="onCancelClick()">Cancel</button>
+</div>
+</div>
